@@ -1,14 +1,13 @@
-function processNumber (number) {
-
-    const ganjil = number.filter((x) => x % 2 !== 0);
-    if (ganjil.length === 0) return 1;
-   
-    let result = 1;
-    for ( let i = 0; i < ganjil.length; i++) {
-        result *= ganjil[i];
-        
+function processNumber(numbers) {
+    if (!Array.isArray(numbers)) {
+        throw new Error("Parameter harus berupa array");
     }
-    return result;
+    
+    const ganjil = numbers.filter(x => x % 2 !== 0);
+    if (ganjil.length === 0) return 1;
+    
+    return ganjil.reduce((result, num) => result * num, 1);
 }
 module.exports = processNumber;
+
 
