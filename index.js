@@ -76,4 +76,17 @@ function taskInkam() {
     } catch(error) {
         console.log(error.message);
     }
+
+    // Program: Segitiga2
+    // Success
+    const segitiga2 = inkam.triangle2(5);
+    console.log(segitiga2);
+
+    // Failed
+    try {
+        const result = inkam.triangle2("s");
+        console.log(result);
+    } catch(error) {
+        console.log(error.message);
+    }
 }    
