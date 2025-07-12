@@ -89,4 +89,18 @@ function taskInkam() {
     } catch(error) {
         console.log(error.message);
     }
+
+    // Program: ProcessNumber
+    // Success
+    const number = [1,2,3,4,5];
+    console.log(inkam.processNumber(number));
+
+    // Failed
+    try {
+        const result = inkam.processNumber("s");
+        console.log(result);
+    } catch(error) {
+        console.log(error.message);
+    }
+
 }    
