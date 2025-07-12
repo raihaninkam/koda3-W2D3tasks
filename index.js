@@ -111,5 +111,17 @@ function taskInkam() {
         console.log(error.message);
     }
 
+    // Program: Buat rentang
+    // Success
+    const rentang = inkam.buatRentang(1,10);
+    console.log(rentang);
+
+    // Failed
+    try {
+        const result = inkam.buatRentang("s");
+        console.log(result);
+    } catch(error) {
+        console.log(error.message);
+    }
     
 }
