@@ -1,0 +1,23 @@
+a. ReferenceError: user is not defined
+   - Terjadi pada file app.js.
+   - Fungsi: getUserData (baris 15), dipanggil oleh processUser (baris 30), yang dipanggil oleh main (baris 50).
+   - Penyebab : 1. Variabel user digunakan tetapi belum didefinisikan.
+                2. Mungkin lupa inisialisasi variabel atau salah pengejaan nama variabel.
+
+b. TypeError: Cannot read properties of null (reading 'length')
+   - Terjadi pada File data.js (baris 8), dalam fungsi processData
+   - processData dipanggil oleh handleRequest (server.js:20), yang dipanggil oleh main (app.js:35)
+   - Penyebab : 1. Mencoba mengakses properti length dari nilai null.
+
+c. SyntaxError: Unexpected token ')'
+   - Terjadi pada File script.js (baris 5)
+   - Penyebab : 1. Kesalahan syntax seperti kurung tutup ) tanpa pasangan, atau typo dalam penulisan kode.
+
+d. TypeError: Cannot set properties of undefined (setting 'status')
+   - Terjadi pada File order.js
+   - Fungsi updateOrder (baris 18), dipanggil oleh processOrder (baris 35), yang dipanggil oleh checkout (cart.js:50)
+   - Penyebab : 1. Mencoba mengatur properti status pada variabel yang bernilai undefined.
+                
+e. RangeError: Maximum call stack size exceeded  
+   - Terjadi pada File app.js, Fungsi recursiveFunction (baris 10)
+   - Penyebab : 1. Rekursi tak terbatas (memanggil diri sendiri tanpa kondisi berhenti).              
