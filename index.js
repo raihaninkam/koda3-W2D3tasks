@@ -52,91 +52,46 @@ const inkam = require("./tasks/inkam");
 function taskInkam() {
     // Program: Segitiga
     try {
-        const segitiga = inkam.triangle(5);
-        console.log("Segitiga:", segitiga);
-        
-        // Test case failed (manual throw)
-        const invalidInput = "bukan_angka";
-        if (typeof invalidInput !== "number") {
-            throw new TypeError("Input harus berupa angka");
-        }
-    } catch(error) {
-        console.log("Error Segitiga:", error.message);
+        console.log("Segitiga:\n" + inkam.triangle(5));
+    } catch (error) {
+        console.log("Error di Segitiga:", error.message);
     }
 
-    // Program: countArray
+    // Program: Perkalian Array
     try {
-        const arr = [1, 2, 3, 4, 5];
-        const count = inkam.countArray(arr);
-        console.log("Count Array:", count);
-        
-        // Test case failed
-        const invalidArr = "bukan_array";
-        if (!Array.isArray(invalidArr)) {
-            throw new TypeError("Input harus berupa array");
-        }
-    } catch(error) {
-        console.log("Error countArray:", error.message);
+        console.log("Hasil Perkalian Array:", inkam.countArray([2, 3, 4]));
+    } catch (error) {
+        console.log("Error di countArray:", error.message);
     }
 
-    // Program: Segitiga2
+    // Program: Segitiga Terbalik
     try {
-        const segitiga2 = inkam.triangle2(5);
-        console.log("Segitiga2:", segitiga2);
-        
-        // Test case failed
-        const invalidSize = -1;
-        if (invalidSize <= 0) {
-            throw new Error("Ukuran harus lebih besar dari 0");
-        }
-    } catch(error) {
-        console.log("Error Segitiga2:", error.message);
+        console.log("Segitiga Terbalik:\n" + inkam.triangle2(5));
+    } catch (error) {
+        console.log("Error di triangle2:", error.message);
     }
 
-    // Program: ProcessNumber
+    // Program: Perkalian Ganjil
     try {
-        const numbers = [1, 2, 3, 4, 5];
-        console.log("Process Number:", inkam.processNumber(numbers));
-        
-        // Test case failed
-        const invalidNumbers = [1, "dua", 3];
-        if (invalidNumbers.some(isNaN)) {
-            throw new Error("Array harus berisi angka semua");
-        }
-    } catch(error) {
-        console.log("Error ProcessNumber:", error.message);
+        console.log("Hasil Perkalian Ganjil:", inkam.processNumber([1, 2, 3, 5]));
+    } catch (error) {
+        console.log("Error di processNumber:", error.message);
     }
 
-    // Program: Cetak Tabel
+    // Program: Tabel Perkalian
     try {
-        const jumlah = 4;
-        console.log("Tabel Perkalian:", inkam.cetakTabel(jumlah));
-        
-        // Test case failed
-        const invalidJumlah = 4.5;
-        if (!Number.isInteger(invalidJumlah)) {
-            throw new Error("Input harus integer");
-        }
-    } catch(error) {
-        console.log("Error Cetak Tabel:", error.message);
+        console.log("Tabel Perkalian:\n" + inkam.cetakTabel(5));
+    } catch (error) {
+        console.log("Error di cetakTabel:", error.message);
     }
 
-    // Program: Buat rentang
+    // Program: Rentang Angka
     try {
-        const rentang = inkam.buatRentang(1, 10);
-        console.log("Rentang Angka:", rentang);
-        
-        // Test case failed
-        const start = "a";
-        const end = 10;
-        if (typeof start !== "number" || typeof end !== "number") {
-            throw new TypeError("Parameter harus angka");
-        }
-    } catch(error) {
-        console.log("Error Buat Rentang:", error.message);
+        console.log("Rentang Angka:", inkam.buatRentang(1, 5));
+    } catch (error) {
+        console.log("Error di buatRentang:", error.message);
     }
 }
 
-// Panggil fungsi
 taskInkam();
 
