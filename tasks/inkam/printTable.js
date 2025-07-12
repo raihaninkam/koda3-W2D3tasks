@@ -1,6 +1,6 @@
-function cetakTabel (n) {
-    if (typeof n !== "number") {
-        console.log("Parameter harus bertipe data nomor dan harus nomor positif");
+function cetakTabel(n) {
+    if (typeof n !== "number" || n <= 0) {
+        throw new Error("Parameter harus bertipe data number dan positif");
     }
     let result = "";
     for (let i = 1; i <= 10; i++) {
