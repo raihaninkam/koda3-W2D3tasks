@@ -129,3 +129,5 @@ function taskInkam() {
         console.log(error.message);
     }
 }  
+// Panggil fungsi
+taskInkam();
