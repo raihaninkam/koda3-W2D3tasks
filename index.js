@@ -103,4 +103,17 @@ function taskInkam() {
         console.log(error.message);
     }
 
+    // Program: Cetak Tabel
+    // Success
+    const jumlah = 4;
+    console.log(inkam.cetakTabel(jumlah));
+
+    // Failed
+    try {
+        const result = inkam.cetakTabel("s");
+        console.log(result);
+    } catch(error) {
+        console.log(error.message);
+    }
+
 }    
